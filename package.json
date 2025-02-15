@@ -9,6 +9,9 @@
     "SASS"
   ],
   "author": "tyler <tander1001@gmail.com>",
+  "contributors": [
+    "Tyler <tander1001@gmail.com>"
+  ],
   "license": "ISC",
   "description": "Learning SASS and its glory",
   "repository": "https://github.com/Celthros/sass-start-site.git",
