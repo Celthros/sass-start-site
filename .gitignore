@@ -41,7 +41,6 @@ coverage/
 .sass-cache/
 
 # npm debug files
-npm-debug.log*
 .eslintcache
 
 # Optional REPL history

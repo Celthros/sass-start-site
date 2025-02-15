@@ -1,12 +1,22 @@
 {
-  "name": "learn1",
+  "name": "learnsass",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "SASS"
+  ],
+  "author": "tyler <tander1001@gmail.com>",
   "license": "ISC",
-  "description": ""
+  "description": "Learning SASS and its glory",
+  "repository": "https://github.com/Celthros/sass-start-site.git",
+  "private": true,
+  "workspaces": [
+    "natours/after-S05",
+    "natours/final-after-S06",
+    "trillo/starter",
+    "trillo/final"
+  ]
 }
