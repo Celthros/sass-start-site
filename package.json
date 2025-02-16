@@ -11,7 +11,6 @@
     "HTML",
     "Yarn",
     "NPM"
-
   ],
   "author": "tyler <tander1001@gmail.com>",
   "contributors": [
@@ -28,5 +27,7 @@
     "trillo/starter",
     "trillo/final"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }
