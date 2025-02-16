@@ -6,7 +6,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "SASS"
+    "SASS",
+    "CSS",
+    "HTML",
+    "Yarn",
+    "NPM"
+
   ],
   "author": "tyler <tander1001@gmail.com>",
   "contributors": [
@@ -17,9 +22,11 @@
   "repository": "https://github.com/Celthros/sass-start-site.git",
   "private": true,
   "workspaces": [
+    "gettingstarted",
     "natours/after-S05",
     "natours/final-after-S06",
     "trillo/starter",
     "trillo/final"
-  ]
+  ],
+  "dependencies": {}
 }
