@@ -4,7 +4,8 @@
   "description": "Getting started with na-tours",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "sass --watch sass/main.scss css/style.css",
+    "migrate:sass": "sass-migrator module --migrate-deps sass/main.scss css/style.css"
   },
   "author": "Tyler",
   "license": "ISC",
