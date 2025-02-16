@@ -14,7 +14,7 @@
 
 [data-icon]:before {
     content: attr(data-icon);
-    font-family: "linea-basic-10" !important;
+    font-family: "linea-basic-10", serif !important;
     -webkit-font-smoothing: antialiased;
     font-style: normal !important;
     font-variant: normal !important;
@@ -27,7 +27,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-    font-family: "linea-basic-10" !important;
+    font-family: "linea-basic-10", serif !important;
     -webkit-font-smoothing: antialiased;
     font-style: normal !important;
     font-variant: normal !important;
