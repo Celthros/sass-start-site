@@ -59,13 +59,87 @@ body {
   padding: 3rem;
 }
 
+.btn, .btn:link, .btn:visited {
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.4) scaleY(1.6);
+}
+.btn:active, .btn:focus {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  outline: none;
+  transform: translateY(-1px);
+}
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+.btn--white::after {
+  background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn--green::after {
+  background-color: #55c57a;
+}
+.btn::after {
+  border-radius: 10rem;
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.4s;
+  width: 100%;
+  z-index: -1;
+}
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.btn-text:link, .btn-text:visited {
+  border-bottom: 1px solid #55c57a;
+  color: #55c57a;
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 3px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
 .heading-primary {
   backface-visibility: hidden;
   color: #fff;
   margin-bottom: 6rem;
   text-transform: uppercase;
 }
-
 .heading-primary--main {
   animation-duration: 1s;
   animation-name: moveInLeft;
@@ -79,7 +153,6 @@ body {
   animation-iteration-count: 3;
   */
 }
-
 .heading-primary--sub {
   animation: moveInRight 1s ease-out;
   display: block;
@@ -99,7 +172,6 @@ body {
   text-transform: uppercase;
   transition: all 0.2s;
 }
-
 .heading-secondary:hover {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
   transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -158,93 +230,6 @@ body {
   height: 100%;
   object-fit: cover;
   width: 100%;
-}
-
-.btn, .btn:link, .btn:visited {
-  border: none;
-  border-radius: 10rem;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.6rem;
-  padding: 1.5rem 4rem;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.2s;
-}
-
-.btn:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
-}
-
-.btn:hover::after {
-  opacity: 0;
-  transform: scaleX(1.4) scaleY(1.6);
-}
-
-.btn:active, .btn:focus {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  outline: none;
-  transform: translateY(-1px);
-}
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn--green {
-  background-color: #55c57a;
-  color: #fff;
-}
-
-.btn--green::after {
-  background-color: #55c57a;
-}
-
-.btn::after {
-  border-radius: 10rem;
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.4s;
-  width: 100%;
-  z-index: -1;
-}
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
-
-.btn-text:link, .btn-text:visited {
-  border-bottom: 1px solid #55c57a;
-  color: #55c57a;
-  display: inline-block;
-  font-size: 1.6rem;
-  padding: 3px;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.btn-text:hover {
-  background-color: #55c57a;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0);
 }
 
 .card {
@@ -806,17 +791,14 @@ body {
   position: relative;
   transition: 0.1s all ease-in-out;
 }
-
 .header__logo-box {
   left: 4rem;
   position: absolute;
   top: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   left: 50%;
   position: absolute;
@@ -1008,6 +990,7 @@ body {
   padding: 6rem;
   width: 50%;
 }
+
 
 
 /*# sourceMappingURL=style.css.map */
