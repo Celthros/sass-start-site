@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as v;
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  color: v.$color-grey-dark;
+  font-family: "Lato", sans-serif;
+  /*font-size: 16px;*/
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+}
