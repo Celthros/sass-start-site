@@ -65,7 +65,6 @@ body {
     margin-bottom: 6rem;
     text-transform: uppercase;
 }
-
 .heading-primary--main {
     animation-duration: 1s;
     animation-name: moveInLeft;
@@ -79,7 +78,6 @@ body {
     animation-iteration-count: 3;
     */
 }
-
 .heading-primary--sub {
     animation: moveInRight 1s ease-out;
     display: block;
@@ -99,7 +97,6 @@ body {
     text-transform: uppercase;
     transition: all 0.2s;
 }
-
 .heading-secondary:hover {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
     transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -196,17 +193,14 @@ body {
     position: relative;
     transition: 0.1s all ease-in-out;
 }
-
 .header__logo-box {
     left: 4rem;
     position: absolute;
     top: 4rem;
 }
-
 .header__logo {
     height: 3.5rem;
 }
-
 .header__text-box {
     left: 50%;
     position: absolute;

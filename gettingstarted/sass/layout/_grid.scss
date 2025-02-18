@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as var;
+
+.row {
+  background-color: #eee;
+  margin: 0 auto;
+  max-width: var.$grid-width;
+
+  &:not(:last-child) {
+	margin-bottom: var.$gutter-vertical;
+  }
+
+  .col-1-of-2 {
+
+  }
+
+}
