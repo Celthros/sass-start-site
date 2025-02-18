@@ -1,5 +1,3 @@
-@use "../abstracts/variables" as v;
-
 *,
 *::after,
 *::before {
@@ -14,13 +12,4 @@ html {
 
 body {
   box-sizing: border-box;
-}
-
-body {
-  color: v.$color-grey-dark;
-  font-family: "Lato", sans-serif;
-  /*font-size: 16px;*/
-  font-weight: 400;
-  line-height: 1.7;
-  padding: 3rem;
 }
