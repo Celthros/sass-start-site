@@ -1,6 +1,6 @@
 @use "abstracts/functions" as func;
 @use "abstracts/mixins" as mix;
-@use "abstracts/variables" as v;
+@use "abstracts/variables" as var;
 
 @use "base/animations";
 @use "base/base";
@@ -10,3 +10,17 @@
 @use "layout/grid" as grid;
 
 @use "components/button";
+
+.grid-test {
+  color: var.$color-white;
+  font-size: 1.125rem;
+
+  & [class^="col-"] {
+	padding: 2rem;
+	background-color: var.$color-orangered;
+  }
+
+  & .row {
+	background-color: #eee;
+  }
+}

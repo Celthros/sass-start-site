@@ -109,35 +109,46 @@ body {
 }
 
 .row {
-    background-color: #eee;
     margin: 0 auto;
     max-width: 114rem;
 }
 .row:not(:last-child) {
     margin-bottom: 8rem;
 }
-
 .row::after {
-    clear: both;
     content: "";
     display: table;
+    clear: both;
 }
-
 .row [class^=col-] {
-    background-color: #ff4500;
+    float: left;
 }
 
+.row [class^=col-]:not(:last-child) {
+    margin-right: 6rem;
+}
 .row .col-1-of-2 {
-    float: left;
     width: calc((100% - 6rem) / 2);
 }
 
-.row .col-1-of-2:not(:last-child) {
-    margin-right: 6rem;
+.row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3);
 }
 
-.row .col-1-of-2 .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3);
+.row .col-2-of-3 {
+    width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+}
+
+.row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+    width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+}
+
+.row .col-3-of-4 {
+    width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
 }
 
 .btn, .btn:link, .btn:visited {
@@ -213,6 +224,20 @@ body {
 .btn-text:active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0);
+}
+
+.grid-test {
+    color: #fff;
+    font-size: 1.125rem;
+}
+
+.grid-test [class^=col-] {
+    padding: 2rem;
+    background-color: #ff4500;
+}
+
+.grid-test .row {
+    background-color: #eee;
 }
 
 /*# sourceMappingURL=grid.css.map */
