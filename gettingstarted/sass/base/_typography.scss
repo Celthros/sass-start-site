@@ -1,7 +1,7 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts/variables" as var;
 
 body {
-  color: v.$color-grey-dark;
+  color: var.$color-grey-dark;
   font-family: "Lato", sans-serif;
   /*font-size: 16px;*/
   font-weight: 400;
@@ -11,37 +11,40 @@ body {
 
 .heading-primary {
   backface-visibility: hidden;
-  color: v.$color-white;
+  color: var.$color-white;
   margin-bottom: 6rem;
   text-transform: uppercase;
 
   &--main {
-	animation-duration: 1s;
-	animation-name: moveInLeft;
-	animation-timing-function: ease-out;
-	display: block;
-	font-size: 6rem;
-	font-weight: 400;
-	letter-spacing: 3.5rem;
-	/*
+    animation-duration: 1s;
+    animation-name: moveInLeft;
+    animation-timing-function: ease-out;
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    /*
 	animation-delay: 3s;
 	animation-iteration-count: 3;
 	*/
   }
 
   &--sub {
-	animation: moveInRight 1s ease-out;
-	display: block;
-	font-size: 2rem;
-	font-weight: 700;
-	letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
   }
-
 }
 
 .heading-secondary {
   -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(
+                  to right,
+                  var.$color-primary-light,
+                  var.$color-primary-dark
+  );
   color: transparent;
   display: inline-block;
   font-size: 3.5rem;
@@ -51,10 +54,9 @@ body {
   transition: all 0.2s;
 
   &:hover {
-	text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
-	transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
   }
-
 }
 
 .heading-tertiary {
