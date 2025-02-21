@@ -111,7 +111,6 @@ body {
 .paragraph {
     font-size: 1.6rem;
 }
-
 .paragraph:not(:last-child) {
     margin-bottom: 3rem;
 }
@@ -238,8 +237,8 @@ body {
   display: inline-block;
   font-size: 1.6rem;
     padding: 0.1875rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-decoration: none;
     transition: all 0.2s;
 }
