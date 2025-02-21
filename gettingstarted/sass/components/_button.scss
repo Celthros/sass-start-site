@@ -1,7 +1,7 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .btn {
-
   &,
   &:link,
   &:visited {
@@ -9,7 +9,7 @@
 	border-radius: 10rem;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 1.6rem;
+	font-size: var.$default-font-size;
 	padding: 1.5rem 4rem;
 	position: relative;
 	text-decoration: none;
@@ -25,33 +25,31 @@
 	  opacity: 0;
 	  transform: scaleX(1.4) scaleY(1.6);
 	}
-
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 	outline: none;
 	transform: translateY(-1px);
   }
 
   &--white {
-	background-color: v.$color-white;
-	color: v.$color-grey-dark;
+	background-color: var.$color-white;
+	color: var.$color-grey-dark;
 
 	&::after {
-	  background-color: v.$color-white;
+	  background-color: var.$color-white;
 	}
-
   }
 
   &--green {
 	background-color: #55c57a;
-	color: v.$color-white;
+	color: var.$color-white;
 
 	&::after {
 	  background-color: #55c57a;
 	}
-
   }
 
   &::after {
@@ -72,26 +70,27 @@
 	animation-fill-mode: backwards;
   }
 
-  &-text:link, &-text:visited {
-	border-bottom: 1px solid #55c57a;
-	color: #55c57a;
+  &-text:link,
+  &-text:visited {
+	border-bottom: 1px solid var.$color-primary;
+	color: var.$color-primary;
 	display: inline-block;
-	font-size: 1.6rem;
-	padding: 3px;
+	font-size: var.$default-font-size;
+	padding: 0.1875rem;
 	text-decoration: none;
 	transition: all 0.2s;
+	@include mix.padding-x(1);
   }
 
   &-text:hover {
-	background-color: #55c57a;
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-	color: v.$color-white;
+	background-color: var.$color-primary;
+	box-shadow: 0 1rem 2rem rgba(var.$color-black, 0.15);
+	color: var.$color-white;
 	transform: translateY(-2px);
   }
 
   &-text:active {
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0.5rem 1rem rgba(var.$color-black, 0.15);
 	transform: translateY(0);
   }
-
 }

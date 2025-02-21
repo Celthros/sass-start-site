@@ -74,9 +74,9 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     /*
-    animation-delay: 3s;
-    animation-iteration-count: 3;
-    */
+      animation-delay: 3s;
+      animation-iteration-count: 3;
+      */
 }
 .heading-primary--sub {
     animation: moveInRight 1s ease-out;
@@ -120,11 +120,12 @@ body {
     display: table;
     clear: both;
 }
-.row [class^=col-] {
+
+.row [class^="col-"] {
     float: left;
 }
 
-.row [class^=col-]:not(:last-child) {
+.row [class^="col-"]:not(:last-child) {
     margin-right: 6rem;
 }
 .row .col-1-of-2 {
@@ -151,7 +152,9 @@ body {
     width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
 }
 
-.btn, .btn:link, .btn:visited {
+.btn,
+.btn:link,
+.btn:visited {
     border: none;
     border-radius: 10rem;
     cursor: pointer;
@@ -171,7 +174,9 @@ body {
     opacity: 0;
     transform: scaleX(1.4) scaleY(1.6);
 }
-.btn:active, .btn:focus {
+
+.btn:active,
+.btn:focus {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     outline: none;
     transform: translateY(-1px);
@@ -206,7 +211,9 @@ body {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
 }
-.btn-text:link, .btn-text:visited {
+
+.btn-text:link,
+.btn-text:visited {
     border-bottom: 1px solid #55c57a;
     color: #55c57a;
     display: inline-block;
@@ -231,9 +238,9 @@ body {
     font-size: 1.125rem;
 }
 
-.grid-test [class^=col-] {
-    padding: 2rem;
+.grid-test [class^="col-"] {
     background-color: #ff4500;
+    padding: 2rem;
 }
 
 .grid-test .row {

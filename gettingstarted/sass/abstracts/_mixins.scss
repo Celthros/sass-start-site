@@ -5,3 +5,8 @@
 	clear: both;
   }
 }
+
+@mixin padding-x($padding-value) {
+  padding-left: #{$padding-value}rem;
+  padding-right: #{$padding-value}rem;
+}

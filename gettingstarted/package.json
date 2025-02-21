@@ -4,14 +4,20 @@
   "description": "Getting started with na-tours",
   "main": "index.js",
   "scripts": {
+    "start": "npm-run-all --parallel devserver compile:sass",
     "compile:sass": "sass --watch sass/main.scss css/style.css",
     "grid:sass": "sass --watch sass/grid1.scss css/grid.css",
     "devserver": "live-server --browser=chrome",
-    "migrate:sass": "sass-migrator module --migrate-deps sass/main.scss css/style.css"
+    "migrate:sass": "sass-migrator module --migrate-deps sass/main.scss css/style.css",
+    "lint": "eslint --fix .",
+    "lint:css": "stylelint --fix 'css/*.css'",
+    "format": "prettier --write ."
   },
   "author": "Tyler",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^9.20.1",
+    "prettier": "^3.5.1",
     "sass": "^1.85.0"
   }
 }
