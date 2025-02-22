@@ -1,3 +1,5 @@
+@use "variables" as var;
+
 @mixin clearfix {
   &::after {
 	content: "";
@@ -9,4 +11,19 @@
 @mixin padding-x($padding-value) {
   padding-left: #{$padding-value}rem;
   padding-right: #{$padding-value}rem;
+}
+
+@mixin margin-x($margin-value) {
+  margin-left: #{$margin-value}rem;
+  margin-right: #{$margin-value}rem;
+}
+
+@mixin line-gradient-img($direction: "right bottom", $color1: var.$color-primary-light, $color2: var.$color-primary-dark, $image: "none", $opacity1: 0.8, $opacity2: 0.8, $size: "cover") {
+  background-image: linear-gradient(
+				  to #{$direction},
+				  rgba($color1, $opacity1),
+				  rgba($color2, $opacity2)
+  ),
+  url(#{$image});
+  background-size: #{$size};
 }
