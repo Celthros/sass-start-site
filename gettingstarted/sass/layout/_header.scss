@@ -1,14 +1,9 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .header {
-  background-image: linear-gradient(
-				  to right bottom,
-				  rgba(v.$color-primary-light, 0.8),
-				  rgba(v.$color-primary-dark, 0.8)
-  ),
-  url(../img/hero.jpg);
+  @include mix.line-gradient-img("right bottom", var.$color-primary-light, var.$color-primary-dark, "../img/hero.jpg", 0.8, 0.8, "cover");
   background-position: top;
-  background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   height: 95vh;
