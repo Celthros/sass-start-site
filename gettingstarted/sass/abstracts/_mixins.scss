@@ -42,9 +42,13 @@
 900-1200px: Tablet landscape styles
 1200-1800px: Desktop styles
 1800px and up: Big desktop styles
+
+
+ORDER: Base + Typography > General layout + grid > Pages layout > Components
+
  */
 
-@mixin respond($breakpoint) {
+@mixin media-breakpoint($breakpoint) {
   @if $breakpoint == phone {
 	@media only screen and (max-width: 37.5em) { // 600px
 	  @content;
