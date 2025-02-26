@@ -1,12 +1,13 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 body {
+
   color: var.$color-grey-dark;
-  font-family: "Lato", sans-serif;
   /*font-size: 16px;*/
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -16,34 +17,45 @@ body {
   text-transform: uppercase;
 
   &--main {
-    animation-duration: 1s;
-    animation-name: moveInLeft;
-    animation-timing-function: ease-out;
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    /*
+	animation-duration: 1s;
+	animation-name: moveInLeft;
+	animation-timing-function: ease-out;
+	display: block;
+	font-size: 6rem;
+	font-weight: 400;
+	letter-spacing: 3.5rem;
+
+	@include mix.media-breakpoint(phone) {
+	  font-size: 5rem;
+	  letter-spacing: 1rem;
+	}
+
+	/*
 	animation-delay: 3s;
 	animation-iteration-count: 3;
 	*/
   }
 
   &--sub {
-    animation: moveInRight 1s ease-out;
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
+	animation: moveInRight 1s ease-out;
+	display: block;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 1.75rem;
+
+	@include mix.media-breakpoint(phone) {
+	  letter-spacing: 0.5rem;
+	}
+
   }
 }
 
 .heading-secondary {
   -webkit-background-clip: text;
   background-image: linear-gradient(
-                  to right,
-                  var.$color-primary-light,
-                  var.$color-primary-dark
+				  to right,
+				  var.$color-primary-light,
+				  var.$color-primary-dark
   );
   color: transparent;
   display: inline-block;
@@ -53,9 +65,17 @@ body {
   text-transform: uppercase;
   transition: all 0.2s;
 
+  @include mix.media-breakpoint(tab-port) {
+	font-size: 3rem;
+  }
+
+  @include mix.media-breakpoint(phone) {
+	font-size: 2.5rem;
+  }
+
   &:hover {
-    text-shadow: 0.5rem 1rem 2rem rgba(var.$color-black, 0.2);
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+	text-shadow: 0.5rem 1rem 2rem rgba(var.$color-black, 0.2);
+	transform: skewY(2deg) skewX(15deg) scale(1.1);
   }
 }
 
@@ -69,7 +89,7 @@ body {
   font-size: var.$default-font-size;
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
   }
 
 }
