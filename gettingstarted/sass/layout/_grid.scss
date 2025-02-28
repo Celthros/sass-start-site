@@ -7,6 +7,16 @@
 
   &:not(:last-child) {
     margin-bottom: var.$gutter-vertical;
+
+    @include mix.media-breakpoint(tab-port) {
+      margin-bottom: var.$gutter-vertical-small;
+    }
+
+  }
+
+  @include mix.media-breakpoint(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include mix.clearfix;
@@ -16,7 +26,18 @@
 
     &:not(:last-child) {
       margin-right: var.$gutter-horizontal;
+
+      @include mix.media-breakpoint(tab-port) {
+        margin-bottom: var.$gutter-vertical-small;
+        margin-right: 0;
+      }
+
     }
+
+    @include mix.media-breakpoint(tab-port) {
+      width: 100% !important;
+    }
+
   }
 
   .col-1-of-2 {
