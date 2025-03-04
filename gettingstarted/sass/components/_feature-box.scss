@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .feature-box {
   background-color: rgba(var.$color-white, 0.8);
@@ -9,6 +10,10 @@
   text-align: center;
   transition: transform 0.3s;
 
+  @include mix.media-breakpoint(tab-port) {
+	padding: 2rem;
+  }
+
   &__icon {
 	-webkit-background-clip: text;
 	background-image: linear-gradient(to right, var.$color-primary-light, var.$color-primary-dark);
@@ -16,6 +21,11 @@
 	display: inline-block;
 	font-size: 6rem;
 	margin-bottom: 0.5rem;
+
+	@include mix.media-breakpoint(tab-port) {
+	  margin-bottom: 0;
+	}
+
   }
 
   &:hover {

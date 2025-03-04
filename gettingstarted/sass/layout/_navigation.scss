@@ -43,8 +43,8 @@
 	z-index: 1000;
 
 	@include mix.media-breakpoint(tab-port) {
-	  right: 4.5rem;
-	  top: 4.5rem;
+	  right: 3.5rem;
+	  top: 3.5rem;
 	}
 
 	@include mix.media-breakpoint(phone) {
