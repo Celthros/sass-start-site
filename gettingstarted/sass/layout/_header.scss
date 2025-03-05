@@ -2,13 +2,17 @@
 @use "../abstracts/mixins" as mix;
 
 .header {
-  @include mix.line-gradient-img("right bottom", var.$color-primary-light, var.$color-primary-dark, "../img/hero.jpg", 0.8, 0.8, "cover");
+  @include mix.line-gradient-img("right bottom", var.$color-primary-light, var.$color-primary-dark, "../img/hero-small.jpg", 0.8, 0.8, "cover");
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   height: 95vh;
   position: relative;
   transition: 0.1s all ease-in-out;
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+	@include mix.line-gradient-img("right bottom", var.$color-primary-light, var.$color-primary-dark, "../img/hero.jpg", 0.8, 0.8, "cover");
+  }
 
   @include mix.media-breakpoint(phone) {
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
