@@ -14,9 +14,9 @@
 	height: 95vh;
   }
 
-  @media (min-resolution: 192dpi) and (min-width: 37.5em),
-  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
-  (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+  only screen and (min-width: 125em) {
 	@include mix.line-gradient-img("right bottom", var.$color-primary-light, var.$color-primary-dark, "../img/hero.jpg", 0.8, 0.8, "cover");
   }
 
